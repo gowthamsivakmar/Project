@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <h1>Random Number Generator</h1>
+    <p>Generate a random number between:</p>
+    <input type="number" id="min"  placeholder="Min"/>
+    <input type="number" id="max" placeholder="Max" />
+    <button onclick="generateRandomNumber()">Generate</button>
+    
+
+<script>
+function generateRandomNumber() {var min = parseInt(document.getElementById("min").value); var max = parseInt(document.getElementById("max").value);
+
+  if (!isNaN(min) && !isNaN(max)) {
+  var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+  document.write("Random Number" + randomNumber);
+           
+ } else {
+     document.write("Please enter valid min and max values.");
+            }
+        }
+    </script>
+</body>
+</html>
+
